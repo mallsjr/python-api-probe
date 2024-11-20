@@ -2,7 +2,7 @@
 FROM python:3.13
 
 # Define build arguments
-ARG PORT
+#ARG PORT
 
 # Set the working directory to /app
 WORKDIR /app
@@ -21,11 +21,11 @@ COPY . .
 
 # Set the environment variable for Flask
 ENV FLASK_APP=app.py
-ENV PORT=${PORT}
+#ENV PORT=${PORT}
 
 # Expose the port that the Flask app will run on
-EXPOSE ${PORT}
+EXPOSE 5000
 
 # Start the Flask application
 # CMD ["poetry", "run", "flask", "run", "--host=0.0.0.0", "--port=${PORT}"] # Does not work
-CMD poetry run flask run --host=0.0.0.0 --port=${PORT}
+CMD poetry run flask run --host=0.0.0.0 --port=5000
