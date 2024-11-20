@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "api-probe"
+version = "0.1.0"
+description = ""
+authors = ["Michael Alls"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+flask = "^3.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
